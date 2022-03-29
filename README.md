@@ -1,12 +1,12 @@
-PIN 1/GPIO0	: UART0_Tx	  // To USB-COM 
+PIN 1/GPIO0	: UART0_Tx	  // To USB-COM
 PIN 2/GPIO1	: UART0_Rx	  // To USB-COM
 PIN 3/	: GND
 
 PIN 6/GPIO4	: UART1_Tx	  // To ESP32_Tx (PIN31/IO19)
 PIN 7/GPIO5	: UART1_Rx	  // To ESP32_Rx (PIN36/IO22)
 PIN 8/	: GND
-PIN 9/GPIO6	: UART1_CTS	  // To ESP32_RTS(PIN13/IO14) 
-PIN10/GPIO7	: UART1_RTS	  // To ESP32_CTS(PIN23/IO15) 
+PIN 9/GPIO6	: UART1_CTS	  // To ESP32_RTS(PIN13/IO14)
+PIN10/GPIO7	: UART1_RTS	  // To ESP32_CTS(PIN23/IO15)
 
 PIN14/GPIO10: Speaker IO out	// To Speaker (Active High)
 PIN15/GPIO11: CS IO out			  // To 240x320LCD_CS(PIN3)
@@ -27,3 +27,5 @@ Connect to IP-arrd:54000 and send one command of the follows;
 	ECHO xxx yyy zzz ...  => echo "xxx yyy zzz ..."
 	LED RED/GREEN/BLUE 1/0 => LED on or off of RED(GPIO28) or BLUE(GPIO20) or GREEN(GPIO26)
 	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite)
+
+![](pico_server.JPG)
