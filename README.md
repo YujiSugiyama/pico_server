@@ -1,15 +1,16 @@
 # Raspberry Pi Pico Pin assignment
 <pre>
-PIN 1/GPIO0	: UART0_Tx	// To USB-COM<br/>
-PIN 2/GPIO1	: UART0_Rx	// To USB-COM<br/>
+---STDIN/STDOUT---
+PIN 1/GPIO0	: UART0_Tx	// To USB-COM for serial console(STDOUT)<br/>
+PIN 2/GPIO1	: UART0_Rx	// To USB-COM for serial console(STDIN)<br/>
 PIN 3/		: GND<br/>
-
+---ESP32 control---
 PIN 6/GPIO4	: UART1_Tx	// To ESP32_Tx (PIN31/IO19)<br/>
 PIN 7/GPIO5	: UART1_Rx	// To ESP32_Rx (PIN36/IO22)<br/>
 PIN 8/		: GND<br/>
-PIN 9/GPIO6	: UART1_CTS	// To ESP32_RTS(PIN13/IO14)<br/>
-PIN10/GPIO7	: UART1_RTS	// To ESP32_CTS(PIN23/IO15)<br/>
-
+PIN 9/GPIO6	: UART1_CTS	// To ESP32_RTS(PIN13/IO14), H/W flow control<br/>
+PIN10/GPIO7	: UART1_RTS	// To ESP32_CTS(PIN23/IO15), H/W flow control<br/>
+---LCD out and speaker out---
 PIN14/GPIO10	: Speaker IO out// To Speaker (Active High)<br/>
 PIN15/GPIO11	: CS IO out	// To 240x320LCD_CS(PIN3)<br/>
 PIN16/GPIO12	: D/C IO out	// To 240x320LCD_D/C(PIN5)<br/>
@@ -17,7 +18,7 @@ PIN17/GPIO13	: RESET IO out	// To 240x320LCD_RESET(PIN4)<br/>
 PIN18/		: GND		// To 240x320GND<br/>
 PIN19/GPIO14	: SPI1_CLK 	// To 240x320LCD_SCK(PIN7)<br/>
 PIN20/GPIO15	: SPI1_MOSI(TX)	// To 240x320LCD_MOSI(PIN6)<br/>
-
+---LEDs---
 PIN26/GPIO20	: BLUE_LED<br/>
 PIN31/GPIO26	: GREEN_LED<br/>
 PIN34/GPIO28	: RED_LED<br/>
