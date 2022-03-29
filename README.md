@@ -1,4 +1,4 @@
-# Raspberry Pi Pico Pin assignment
+## Raspberry Pi Pico Pin assignment
 <pre>
 ---STDIN/STDOUT---
 PIN 1/GPIO0	: UART0_Tx	// To USB-COM for serial console(STDOUT)
@@ -42,5 +42,11 @@ PIN34/GPIO28	: RED_LED
 <pre>
 Implementing simple file system on SD card
 Implementing the function to upload a file to the file system.
+
+PIN21/GPIO16	: SPI0_MISO(Rx) To 240x320SD_MISO(Tx, PIN3)
+PIN22/GPIO17	: SPI0_CS To 240x320SD_CS(PIN1)
+PIN23/		: GND
+PIN24/GPIO18	: SPI0_SCK To 240x320SD_SCK(PIN4)
+PIN25/GOPI19	: SPIO_MOSI(Tx) To 240x320SD_MOSI(Rx, PIN2)
 </pre>
 
