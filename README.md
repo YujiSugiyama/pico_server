@@ -31,4 +31,4 @@ Connect to IP-arrd:54000 and send one command of the follows;<br/>
 	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite)<br/>
 
 ## Breadboard
-![](pico_server.JPG)
+See pico_server.JPG
