@@ -35,4 +35,9 @@ PIN34/GPIO28	: RED_LED<br/>
 </pre>
 
 ## Breadboard
-See pico_server.JPG
+<img src="pico_server.jpg">
+
+## Under construction but ...
+Implementing simple file system on SD card
+Implementing a function to upload a file to the file system.
+
