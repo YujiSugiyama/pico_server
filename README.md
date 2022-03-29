@@ -1,4 +1,5 @@
 # Raspberry Pi Pico Pin assignment
+<pre>
 PIN 1/GPIO0	: UART0_Tx	// To USB-COM<br/>
 PIN 2/GPIO1	: UART0_Rx	// To USB-COM<br/>
 PIN 3/		: GND<br/>
@@ -20,15 +21,18 @@ PIN20/GPIO15	: SPI1_MOSI(TX)	// To 240x320LCD_MOSI(PIN6)<br/>
 PIN26/GPIO20	: BLUE_LED<br/>
 PIN31/GPIO26	: GREEN_LED<br/>
 PIN34/GPIO28	: RED_LED<br/>
+</pre>
 
 ## How to use
-Come on IP-addr:54000/index.html with your browser like Chrome<br/>
+<pre>
+1. Simple HTTP server : Come on IP-addr:54000/index.html with your browser like Chrome<br/>
 	Simple HTTP server supporting GET/POST.<br/>
 	The input from operator to be replied on POST method.<br/>
-Connect to IP-arrd:54000 and send one command of the follows;<br/>
+2. Command server : Connect to IP-arrd:54000 and send one command of the follows;<br/>
 	ECHO xxx yyy zzz ...  => echo "xxx yyy zzz ..."<br/>
 	LED RED/GREEN/BLUE 1/0 => LED on or off of RED(GPIO28) or BLUE(GPIO20) or GREEN(GPIO26)<br/>
 	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite)<br/>
+</pre>
 
 ## Breadboard
 See pico_server.JPG
