@@ -32,7 +32,7 @@ PIN34/GPIO28	: RED_LED
 2. Command server : Connect to IP-arrd:54000 and send one command of the follows;
 	ECHO xxx yyy zzz ...  => echo "xxx yyy zzz ..."
 	LED RED/GREEN/BLUE 1/0 => LED on or off of RED(GPIO28) or BLUE(GPIO20) or GREEN(GPIO26)
-	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite)
+	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite), Input "KILL" to stop blinking
 </pre>
 
 ## Breadboard
