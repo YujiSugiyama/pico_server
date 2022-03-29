@@ -1,6 +1,6 @@
 /*
-1. 画像の圧縮は、https://compressjpeg.com/ja/ で出来る。
-2. URLでコードについては、https://www.tagindex.com/cgi-lib/encode/url.cgi で確認できる。
+	1. 画像の圧縮は、https://compressjpeg.com/ja/ で出来る。
+	2. URLでコードについては、https://www.tagindex.com/cgi-lib/encode/url.cgi で確認できる。
 */
 
 struct GET_HTML {
