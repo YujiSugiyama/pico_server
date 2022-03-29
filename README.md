@@ -50,7 +50,7 @@ PIN24/GPIO18	: SPI0_SCK To 240x320SD_SCK(PIN4)
 PIN25/GOPI19	: SPIO_MOSI(Tx) To 240x320SD_MOSI(Rx, PIN2)
 </pre>
 
-## Refereces
+## Refereces and Citations
 <pre>
 With regard to graphlib.c, graphlib.h, ili9341.c and LCDdrive.h, the following repository is refferd.
 https://github.com/KenKenMkIISR/picopacman <br/>
