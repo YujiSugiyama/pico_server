@@ -237,20 +237,22 @@ bool clearATBuffer(const int64_t allowTimeMs) {
 	return sendATCommand("", allowTimeMs, "", false);
 }
 
+// delim2=='\0'なら、delimで区切られた文字列において、pos番目(先頭は0番目から始まる)の者を得る
+// delim2!='\0'なら、delimで区切られた文字列において、pos番目(先頭は0番目から始まる)の者でdelim2までを得る
 std::string getParam(const int pos, const char delim, const char delim2, const std::string from)
 {
 	try {
 		std::string line;
 		std::istringstream iss_input(from);
 
-		std::getline(iss_input, line, delim);
+		std::getline(iss_input, line, delim);			// line <= iss_input[0] ~ delim直前までの文字列, iss_inputはdelim直後まで進む
 		for (int i = 0; i < pos-1; i++)
-			std::getline(iss_input, line, delim);
+			std::getline(iss_input, line, delim);		// line <= delimをpos-1個進み、その直前までの文字列, iss_inputはdelimがpos-1個分直後まで進む
 		if (delim2 == '\0' && pos > 0) {
-			std::getline(iss_input, line, delim);
+			std::getline(iss_input, line, delim);		// line <= delimをpos個進み、その直前までの文字列
 		} else if(pos > 0){
-			line = from.substr((int)iss_input.tellg());
-			std::getline(std::istringstream(line), line, delim2);
+			line = from.substr((int)iss_input.tellg());	// iss_input.tellg()は現在のstreamポインタ位置を得る。ポインタ位置から最後までの文字列を得る
+			std::getline(std::istringstream(line), line, delim2);	// delim2直線までの文字れるを得る
 		}
 		return line;
 	} catch (...) {
