@@ -35,7 +35,7 @@ PIN34/GPIO28	: RED_LED
 	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite), Input "KILL" to stop blinking<br/>
 3. Note that CTS/RTS must be enabled on both PICO and ESP32 as H/W flow control is requied.
 	PICO: uart_set_hw_flow(uart1, true, true);
-	ESP32: Ex. AT+UART_CUR=115200,8,1,0,3 and AT+UART_DEF=115200,8,1,0,3 then power cylce
+	ESP32: Ex. AT+UART_CUR=115200,8,1,0,3 and AT+UART_DEF=115200,8,1,0,3 then power cycle
 </pre>
 
 ## Breadboard
