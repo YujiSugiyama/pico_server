@@ -32,7 +32,7 @@ PIN34/GPIO28	: RED_LED
 2. Command server : Connect to IP-arrd:54000 and send one command of the follows;
 	ECHO xxx yyy zzz ...  => echo "xxx yyy zzz ..."
 	LED RED/GREEN/BLUE 1/0 => LED on or off of RED(GPIO28) or BLUE(GPIO20) or GREEN(GPIO26)
-	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite), Input "KILL" to stop blinking
+	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite), Input "KILL" to stop blinking<br/>
 3. Note that CTS/RTS must be enabled on both PICO and ESP32 as H/W flow control is requied.
 	PICO: uart_set_hw_flow(uart1, true, true);
 	ESP32: Ex. AT+UART_CUR=115200,8,1,0,3 and AT+UART_DEF=115200,8,1,0,3 then power cylce
