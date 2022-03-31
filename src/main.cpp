@@ -187,7 +187,8 @@ bool uart_init(void)
 		gpio_pull_up(UART_CTS_PIN);
 
 		uart_set_translate_crlf(UART_ID, false);
-		uart_set_hw_flow(UART_ID, true, true);
+		uart_set_hw_flow(UART_ID, true, true);				// case for flow control enabled
+//		uart_set_hw_flow(UART_ID, false, false);			// Case for flow control disabled
 		uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
 		uart_set_fifo_enabled(UART_ID, true);
 
