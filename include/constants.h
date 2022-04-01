@@ -24,6 +24,7 @@
 #define UART_RX_PIN		5
 #define UART_CTS_PIN	6
 #define UART_RTS_PIN	7
+#define FLOW_CTRL		1
 
 // UART for STDIO
 #define STDIO_UART		uart0

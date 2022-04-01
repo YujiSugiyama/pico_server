@@ -179,18 +179,23 @@ bool uart_init(void)
 	try {
 		gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
 		gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
+#if FLOW_CTRL == 1
 		gpio_set_function(UART_CTS_PIN, GPIO_FUNC_UART);
 		gpio_set_function(UART_RTS_PIN, GPIO_FUNC_UART);
-		uart_init(UART_ID, BAUD_RATE);
+#endif
 
 		gpio_pull_up(UART_RX_PIN);
 		gpio_pull_up(UART_CTS_PIN);
 
+		uart_init(UART_ID, BAUD_RATE);
 		uart_set_translate_crlf(UART_ID, false);
-		uart_set_hw_flow(UART_ID, true, true);				// case for flow control enabled
-//		uart_set_hw_flow(UART_ID, false, false);			// Case for flow control disabled
 		uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
 		uart_set_fifo_enabled(UART_ID, true);
+#if FLOW_CTRL == 1
+		uart_set_hw_flow(UART_ID, true, true);				// case for flow control enabled
+#else
+		uart_set_hw_flow(UART_ID, false, false);			// Case for flow control disabled
+#endif
 
 		return true;
 	} catch (...) {

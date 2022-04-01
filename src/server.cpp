@@ -59,6 +59,7 @@ bool server_init(void)
 		printf("[Server]: Connected to WiFi\n");
 		printf("[Server]: IP Address: '%s'\n", ipAddress.c_str());
 
+#if 0	// does not work...???
 		printf("[Server]: Setting the UTC time to RTC\n");
 		if (!setupUTCTime()) {
 			printf("[Server]: Failed to set the UTC time to RTC\n");
@@ -68,6 +69,7 @@ bool server_init(void)
 			printf("[Server]-[RTC]: Check Failed\n");
 			return false;
 		}
+#endif
 
 		if (!sendATCommandOK("CIPMUX=1", 2000, false)) {
 			return false;
