@@ -1,4 +1,4 @@
-# Simple Http Sever with RaspberryPi and ESP32
+# Simple Http and Command Sever with RaspberryPi and ESP32
 
 ## Raspberry Pi Pico Pin assignment
 <pre>
@@ -40,7 +40,7 @@ PIN34/GPIO28	: RED_LED
 	ESP32: Ex. AT+UART_CUR=115200,8,1,0,3 and AT+UART_DEF=115200,8,1,0,3 then power cycle
 </pre>
 
-## Breadboard
+## Breadboard(Left bottom RSPi is Http and Command server. Right bottom RSPi is for debugger)
 <img src="pico_server.jpg">
 
 ## Under construction but ...
