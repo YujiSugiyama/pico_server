@@ -33,6 +33,7 @@
 #define STDIO_BAUD_RATE	115200
 
 // LCD
+#define LCD_DISP
 #define SOUNDPORT		10
 #define PWM_WRAP		4000		// 125MHz/31.25KHz
 #define LCD_CS			11			//GPIO11

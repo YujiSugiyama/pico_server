@@ -224,8 +224,10 @@ int main(void)
 	rtc_init();
 
 // Init LCD and Sound
+#ifdef LCD_DISP
 	disp_init();
 	sound_init(0);
+#endif
 
 // Init LED
 	sleep_ms(500);
@@ -262,8 +264,10 @@ int main(void)
 
 // Now, server ready!!!
 	gpio_put(STATUS_LED_PIN, 1);
+#ifdef LCD_DISP
 	disp_ascii();
 	disp_icon();
+#endif
 
 //	multicore_launch_core1(led_process);
 	multicore_launch_core1_with_stack(core1_entry, (uint32_t *)PICO_CORE1_STACK_BOTTOM, PICO_CORE1_STACK_SIZE);

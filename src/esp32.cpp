@@ -98,7 +98,7 @@ char* recvBody(int blen, int64_t allowTimeMs)
 				if (bufp == -2) {
 					return NULL;
 				} else if (bufp == -1) {
-					printf("[AT-Command]-[%s]: Command is too long: (%s)\n", recvBuffer);
+					printf("[AT-Command]-[%s]: Command is too long\n", recvBuffer);
 					return NULL;
 				} else if((bufp-ofs) >= blen){
 					snprintf(_recvBuffer, RECVBUFFERLEN, "%s%s", _recvBuffer, recvBuffer+ofs);

@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.12)
 set(PICO_CXX_ENABLE_EXCEPTIONS 1)
 
 #include build functions from Pico SDK
-include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+include(pico_sdk_import.cmake)
 
 # Set name of project (as PROJECT_NAME) and C/C++ Standards
 project(project_name C CXX ASM)

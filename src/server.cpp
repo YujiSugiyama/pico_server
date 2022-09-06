@@ -157,8 +157,10 @@ void dispatch_server(void)
 				} else if(srv == "POST"){
 					int blen = getHeaderContentValue(recvBuffer,"Content-Length: ");
 					char* body = recvBody(blen, 1000);
-					printf("Body = %s\n", body);
-					http_server(sock, line, body, alive);
+					if(body != NULL){
+						printf("Body = %s\n", body);
+						http_server(sock, line, body, alive);
+					}
 				} else if(srv == "ECHO" || srv == "echo"){
 					line = getParam(1, ' ', '\r', line);
 					printf("[Server(%s)]: ", sock.c_str());

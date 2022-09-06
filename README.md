@@ -29,7 +29,7 @@ PIN34/GPIO28	: RED_LED
 1. Simple HTTP server : Come on IP-addr:54000/index.html with your browser like Chrome
 	Simple HTTP server supporting GET/POST.
 	The input from operator to be replied on POST method.<br/>
-2. Command server : Connect to IP-arrd:54000 and send one command of the follows;
+2. Command server : Connect to IP-addr:54000 and send one command of the follows;
 	ECHO xxx yyy zzz ...  => echo "xxx yyy zzz ..."
 	LED RED/GREEN/BLUE 1/0 => LED on or off of RED(GPIO28) or BLUE(GPIO20) or GREEN(GPIO26)
 	THRD LED interval num-blink => LED blink on core1, interval(msec) num-blink(0 then infinite), Input "KILL" to stop blinking<br/>
